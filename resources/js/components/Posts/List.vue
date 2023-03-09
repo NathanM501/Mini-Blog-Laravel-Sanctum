@@ -17,7 +17,7 @@
         <div class="card-footer d-flex justify-content-between">
           <div>
             <a :href="`posts/${post.id}`" class="btn btn-sm btn-outline-info"
-              >Lire la suite</a
+              ><i class="tf-icons bx bx-show"></i> Lire la suite</a
             >&nbsp;
             <span v-if="post.user_id === user">
               <a

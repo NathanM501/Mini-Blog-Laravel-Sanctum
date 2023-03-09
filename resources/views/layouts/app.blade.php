@@ -68,7 +68,6 @@ layout-menu-fixed
         @endauth
 
 
-
         @guest
         <div class="container-xxl">
             <div class="authentication-wrapper authentication-basic container-p-y">

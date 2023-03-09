@@ -1,2 +1,9 @@
 
 @import url('./demo.css');
+
+.app-brand-text.demo
+{
+text-transform: uppercase!important;
+    text-shadow: 0 1px 0 rgba(200, 200, 200, 200),
+    0 2px 0 rgba(190, 190, 190, 190)!important;
+}

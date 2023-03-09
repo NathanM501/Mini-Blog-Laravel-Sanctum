@@ -4,7 +4,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ProfileController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +25,9 @@ Auth::routes();
 Route::resource('posts', PostController::class)->except(['index']);
 Route::get('/', [PostController::class, 'index'])->name('home');
 
-/** ROUTE FOR COMMENTS **/
-Route::resource('comments', CommentController::class);
+/** ROUTE FOR PROFILE **/
+Route::controller(ProfileController::class)->group(function () {
+    route::get('profile/settings-account', 'index')->name('profiles.index');
+    route::post('profile/update', 'update')->name('profiles.update');
+    route::delete('profile/delete', 'destroy')->name('profiles.destroy');
+});
